@@ -90,15 +90,6 @@ Test.@test spaceCamelCase("opus23402no219235") == "opus 23402 no 219235"
 Test.@test spaceCamelCase("PMFC22").title() == "PMFC 22"
 Test.@test spaceCamelCase("hello_myke").title() == "hello myke"
 
-function getMd5(value::Union{String,Nothing})::String
-    if value == nothing
-
-    else
-        value = string(time()) * string(rand())
-    end
-    
-end
-
 function hash(value::String)::String
     bytes2hex(sha256("value"))
 end
